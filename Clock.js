@@ -53,16 +53,32 @@ class LiveClock extends HTMLElement {
   }
 
   updateTime() {
+    // Set the timezone you want
+    const timeZone = "Asia/Baghdad";
+
     const now = new Date();
-    const hours = now.getHours().toString().padStart(2, "0");
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    const seconds = now.getSeconds().toString().padStart(2, "0");
+
+    // Get the time in the target timezone
+    const options = {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+      timeZone,
+    };
+    const parts = new Intl.DateTimeFormat("en-US", options).formatToParts(now);
+
+    const hours = parts.find((p) => p.type === "hour").value;
+    const minutes = parts.find((p) => p.type === "minute").value;
+    const seconds = parts.find((p) => p.type === "second").value;
 
     this.hoursEl.textContent = hours;
     this.minutesEl.textContent = minutes;
     this.secondsEl.textContent = seconds;
 
-    this.updateGreeting(now.getHours());
+    // Use the hour for greeting
+    const hourNumber = parseInt(hours, 10);
+    this.updateGreeting(hourNumber);
   }
 
   updateGreeting(hour) {

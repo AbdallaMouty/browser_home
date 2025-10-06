@@ -4,51 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <script src="/tailwind.js"></script>
+    <script src="./tailwind.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <script src="/Clock.js" defer></script>
-    <script src="/Notes.js" defer></script>
+      referrerpolicy="no-referrer"
+    />
+    <script src="./Clock.js" defer></script>
+    <script src="./Notes.js" defer></script>
   </head>
   <body
-    class="w-screen h-screen bg-[#151515] flex flex-col items-center justify-center">
-    <notes-section></notes-section>
-    <live-clock></live-clock>
-    <div class="flex items-center justify-center">
-      <input
-        type="text"
-        placeholder="Search..."
-        class="bg-[#f4f4f410] focus:bg-[#f4f4f410] border border-[#f4f4f450] rounded-full font-light text-xl p-2 px-4 w-96 my-5 focus:outline-none focus:border-[#f4f4f4] hover:border-[#f4f4f4] transition duration-300 text-[#f4f4f4] placeholder:text-[#f4f4f450]" />
-    </div>
-    <div class="w-full flex items-center justify-center gap-5">
-      <a
-        target="_blank"
-        href="https://github.com/AbdallaMouty"
-        class="text-[#f4f4f4] border border-[#f4f4f460] rounded-full aspect-square size-10 flex items-center justify-center"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-      <a
-        target="_blank"
-        href="https://chatgpt.com"
-        class="text-[#f4f4f4] border border-[#f4f4f460] rounded-full aspect-square size-10 flex items-center justify-center"
-        ><i class="fa-brands fa-openai"></i
-      ></a>
-      <a
-        target="_blank"
-        href="https://hostinger.com"
-        class="text-[#f4f4f4] border border-[#f4f4f460] rounded-full aspect-square size-10 flex items-center justify-center"
-        ><i class="fa-solid fa-server"></i
-      ></a>
-      <a
-        target="_blank"
-        href=""
-        class="text-[#f4f4f4] border border-[#f4f4f460] rounded-full aspect-square size-10 flex items-center justify-center">
-        <i class="fa-brands fa-cloudflare"></i>
-      </a>
+    class="w-screen h-screen bg-gradient-to-b from-black/50 to-[#151515]/50 flex flex-col items-center justify-center select-none relative"
+  >
+    <img src="./wall.png" class="w-full h-full object-cover" alt="" />
+    <div
+      class="w-full h-full bg-gradient-to-b from-black/70 to-[#151515]/60 flex flex-col items-center justify-center select-none absolute top-0 left-0"
+    >
+      <notes-section></notes-section>
+      <live-clock></live-clock>
+      <div class="flex items-center justify-center">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="bg-[#f4f4f410] focus:bg-[#f4f4f410] border border-[#f4f4f450] rounded-full font-light text-xl p-2 px-4 w-96 my-5 focus:outline-none focus:border-[#f4f4f4] hover:border-[#f4f4f4] transition duration-300 text-[#f4f4f4] placeholder:text-[#f4f4f450] backdrop-blur-md"
+        />
+      </div>
+      <div class="w-full flex items-center justify-center gap-5">
+        <a
+          target="_blank"
+          href="https://github.com/AbdallaMouty"
+          class="text-[#f4f4f4] border border-[#f4f4f460] backdrop-blur-md bg-[#f4f4f410] rounded-full aspect-square size-10 flex items-center justify-center"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://chatgpt.com"
+          class="text-[#f4f4f4] border border-[#f4f4f460] backdrop-blur-md bg-[#f4f4f410] rounded-full aspect-square size-10 flex items-center justify-center"
+          ><i class="fa-brands fa-openai"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://hostinger.com"
+          class="text-indigo-600 border border-[#f4f4f460] rounded-full backdrop-blur-md bg-[#f4f4f410] aspect-square size-10 flex items-center justify-center"
+          ><i class="fa-solid fa-server"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://dash.cloudflare.com/da4d145b38e01fa3f6f7fd7a1c291764/home/developer-platform"
+          class="text-amber-600 border border-[#f4f4f460] rounded-full backdrop-blur-md bg-[#f4f4f410] aspect-square size-10 flex items-center justify-center"
+        >
+          <i class="fa-brands fa-cloudflare"></i>
+        </a>
+      </div>
+      <div class="w-full flex items-center justify-center gap-5 mt-5">
+        <a
+          target="_blank"
+          href="https://discord.com/channels/@me"
+          class="text-indigo-400 border border-[#f4f4f460] rounded-full backdrop-blur-md bg-[#f4f4f410] aspect-square size-10 flex items-center justify-center"
+        >
+          <i class="fa-brands fa-discord"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://web.whatsapp.com"
+          class="text-emerald-400 border border-[#f4f4f460] rounded-full backdrop-blur-md bg-[#f4f4f410] aspect-square size-10 flex items-center justify-center"
+        >
+          <i class="fa-brands fa-whatsapp"></i
+        ></a>
+
+        <a
+          target="_blank"
+          href="https://www.youtube.com/"
+          class="text-red-500 border border-[#f4f4f460] rounded-full backdrop-blur-md bg-[#f4f4f410] aspect-square size-10 flex items-center justify-center"
+        >
+          <i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
     </div>
   </body>
 </html>

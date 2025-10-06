@@ -88,6 +88,7 @@ class NotesSection extends HTMLElement {
             padding: 1rem;
             margin-bottom: 0.75rem;
             transition: all 0.3s;
+            backdrop-filter: blur(12px);
           }
           .note:hover {
             background: rgba(255,255,255,0.08);
@@ -136,7 +137,7 @@ class NotesSection extends HTMLElement {
               <div class="note">
                 <textarea>${this.editContent}</textarea>
                 <div class="actions">
-                  <button data-cancel="${note.id}"><i class="fa-solid fa-xmark"></i></button>
+                  <button data-cancel="${note.id}">x</button>
                   <button data-save="${note.id}"><i class="fa-solid fa-check"></i></button>
                 </div>
               </div>
@@ -146,8 +147,8 @@ class NotesSection extends HTMLElement {
             <div class="note">
               <p style="white-space: pre-wrap;">${note.content}</p>
               <div class="actions">
-                <button data-edit="${note.id}"><i class="fa-solid fa-pen"></i></button>
-                <button data-delete="${note.id}"><i class="fa-solid fa-trash"></i></button>
+                <button data-edit="${note.id}">edit</button>
+                <button data-delete="${note.id}">x</button>
               </div>
             </div>
           `;
